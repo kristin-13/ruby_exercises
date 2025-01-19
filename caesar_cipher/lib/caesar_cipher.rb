@@ -9,7 +9,7 @@ class CaesarCipher
                 alphabet_position = alphabet.find_index(letter.upcase)
                 position_plus_shift = alphabet_position + shift_int
                 replacement_letter_position = 0
-                if position_plus_shift > 25
+                if position_plus_shift > 25 or position_plus_shift < 0
                     replacement_letter_position = position_plus_shift % 26
                 else
                     replacement_letter_position = position_plus_shift
@@ -26,5 +26,3 @@ class CaesarCipher
         return cypher
     end
 end
-# CaesarCypher.
-# caesar_cypher("What a string!", 5)
