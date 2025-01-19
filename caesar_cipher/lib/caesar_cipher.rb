@@ -1,5 +1,5 @@
-class CaesarCypher
-    def caesar_cypher(string,shift_int)
+class CaesarCipher
+    def translate(string,shift_int)
         alphabet = ('A'..'Z').to_a
         cypher = ""
         split_string = string.split("")
@@ -23,7 +23,7 @@ class CaesarCypher
                 cypher+= letter
             end
         end
-        p cypher
+        return cypher
     end
 end
 # CaesarCypher.
